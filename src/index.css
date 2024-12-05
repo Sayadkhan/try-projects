@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-list {
+  display: flex;
+  gap: 10px; /* This is where the gap between the cards will be applied */
+  overflow: hidden; /* Prevents any overflow issues */
+  padding: 0; /* Ensure there's no unwanted padding */
+}
+
+.slick-track {
+  display: flex; /* Align items horizontally */
+  gap: 10px; /* Ensures a gap between the slides */
+}
+
+.slick-slide {
+  display: flex; /* Ensures each slide takes full height */
+  justify-content: center; /* Optional, to center content within each slide */
+}
