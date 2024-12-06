@@ -7,7 +7,7 @@ const BlogSection = () => {
         <div className="w-[757px] rounded-[24px] border-[0.6px] p-[24px]">
           <div>
             <div>
-              <img src="../../public/BLOG/image-4.png" alt="" />
+              <img src="../../../BLOG/image-4.png" alt="" />
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const BlogSection = () => {
           <div className="flex w-[531px] rounded-[20px] border-[0.6px] border-[#13D28A99] items-center justify-center gap-[16px] py-[20px] px-[16px] ">
             <div className="w-[238px] h-[250px] rounded-[12px]">
               <img
-                src="../../public/BLOG/image1.png"
+                src="../../../BLOG/image1.png"
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -72,7 +72,7 @@ const BlogSection = () => {
           <div className="flex w-[531px] rounded-[20px] border-[0.6px] border-[#13D28A99] items-center justify-center gap-[16px] py-[20px] px-[16px] ">
             <div className="w-[238px] h-[250px] rounded-[12px]">
               <img
-                src="../../public/BLOG/image1.png"
+                src="../../../BLOG/image1.png"
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -101,7 +101,7 @@ const BlogSection = () => {
           <div className="flex w-[531px] rounded-[20px] border-[0.6px] border-[#13D28A99] items-center justify-center gap-[16px] py-[20px] px-[16px] ">
             <div className="w-[238px] h-[250px] rounded-[12px]">
               <img
-                src="../../public/BLOG/image1.png"
+                src="../../../BLOG/image1.png"
                 alt=""
                 className="w-full h-full object-cover"
               />
