@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
-          backgroundImage: "url('img-removebg-preview.png')",
+          backgroundImage: "url('image2.png')",
         }}
         aria-hidden="true"
       ></div>

@@ -5,20 +5,26 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const links = [
     { name: "HOME", path: "/" },
-    { name: "ABOUT", path: "/about" },
-    { name: "SERVICES", path: "/services" },
-    { name: "RESOURCES", path: "/resoures" },
+    { name: "ABOUT", path: "/", id: "about" },
+    { name: "SERVICES", path: "/", id: "services" },
+    { name: "RESOURCES", path: "/resources" },
     { name: "CONTACT", path: "/contact" },
   ];
 
   return (
-    <nav className="bg-gray-900 sticky top-0 text-gray-400 h-[70px] px-[10%] flex items-center justify-around z-[99999]">
+    <nav className="bg-gray-900 sticky top-0 text-gray-400 h-[70px] px-[10%] flex items-center justify-between z-[99999]">
       <div className="flex items-center">
         <img src="/logo.png" alt="TDHH Logo" className="h-[50px]" />
       </div>
@@ -26,21 +32,23 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-6 flex-1 justify-center">
         {links.map((link) => (
           <NavLink
+            key={link.name}
+            to={link.path}
             onClick={() => {
-              if (["HOME", "CONTACT", "RESOURCES"].includes(link.name)) {
+              if (link.name !== "SERVICES" && link.name !== "ABOUT") {
                 scrollToTop();
+              } else {
+                handleScrollToSection(link.id);
               }
             }}
-            key={link.path}
-            to={link.path}
             className={({ isActive }) =>
-              `hover:text-gray-200 ${isActive ? "text-white" : ""}`
+              `text-gray-400 hover:text-gray-200 ${
+                isActive ? "text-white" : ""
+              } px-4 py-2`
             }
-
           >
             {link.name}
           </NavLink>
-
         ))}
       </div>
 
@@ -71,23 +79,26 @@ const Navbar = () => {
             <NavLink
               key={index}
               to={link.path}
-              className={({ isActive }) =>
-                `hover:text-gray-200 ${isActive ? "text-white" : ""}`
-              }
               onClick={() => {
-                if (["HOME", "CONTACT", "RESOURCES"].includes(link.name)) {
+                if (link.name !== "SERVICES" && link.name !== "ABOUT") {
                   scrollToTop();
+                } else {
+                  handleScrollToSection(link.id);
                 }
                 setIsMobileMenuOpen(false);
               }}
+              className={({ isActive }) =>
+                `text-gray-400 hover:text-gray-200 ${
+                  isActive ? "text-white" : ""
+                } px-4 py-2`
+              }
             >
               {link.name}
             </NavLink>
-
           ))}
           <NavLink
             to="contact"
-            className="bg-[--btn-bg] hover:bg-green-600 text-white  py-2 rounded"
+            className="bg-[--btn-bg] hover:bg-green-600 text-white py-2 rounded"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             LET'S TALK
