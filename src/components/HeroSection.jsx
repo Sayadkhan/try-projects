@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -19,12 +20,11 @@ const HeroSection = () => {
           Start Small, Build Smarter, Analyze Deeper, And Grow Faster.
         </p>
         <div className="mt-8">
-          <button
-            className="bg-[--btn-bg] text-white font-bold py-3 px-8 rounded-xl transition-transform transform hover:scale-105 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-400"
-            onClick={() => alert("Let's Talk!")}
-          >
-            LET'S TALK!
-          </button>
+          <Link to="/contact" className="">
+            <button className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 transition  duration-300">
+              LET'S TALK!
+            </button>
+          </Link>
         </div>
       </div>
     </section>

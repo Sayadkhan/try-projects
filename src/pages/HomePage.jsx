@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AboutMe from "../components/AboutMe";
 import ContactSection from "../components/ContactSection";
 import MyServiceSection from "../components/MyServiceSection";
@@ -10,7 +11,7 @@ const HomePage = () => {
     <div className="bg-[#020A22]">
       <div className="px-4">
         <HeroSection />
-        <div id="about" className="flex items-center justify-center py-8">
+        <div id="about" className="flex items-center justify-center py-8 ">
           <AboutMe />
         </div>
 
@@ -27,6 +28,12 @@ const HomePage = () => {
             <MyServiceSection />
             <MyServiceSection />
           </div>
+
+          <Link to="/contact" className="mt-8">
+            <button className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 transition  duration-300">
+              LET'S TALK!
+            </button>
+          </Link>
         </div>
 
         {/* SuccessStory Section */}

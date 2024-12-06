@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -98,7 +98,7 @@ const Navbar = () => {
           ))}
           <NavLink
             to="contact"
-            className="bg-[--btn-bg] hover:bg-green-600 text-white py-2 rounded"
+            className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 duration-300"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             LET'S TALK
@@ -109,7 +109,7 @@ const Navbar = () => {
       <div className="hidden md:block">
         <NavLink
           to="/contact"
-          className="bg-[--btn-bg] hover:bg-green-600 text-white px-4 py-2 rounded"
+          className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 duration-300"
         >
           LET'S TALK
         </NavLink>

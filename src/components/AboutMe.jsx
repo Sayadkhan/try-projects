@@ -3,7 +3,7 @@ import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
-    <div className="w-full max-w-screen-lg mx-auto border-[0.7px] p-[32px] text-white">
+    <div className="w-full max-w-screen-lg mx-auto border-[0.7px] p-[32px] text-white mt-8">
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="lg:w-[208px] w-full flex flex-col gap-5 justify-between mb-4">
           <h2 className="font-[700] text-[40px] leading-[40px]">About Me</h2>
