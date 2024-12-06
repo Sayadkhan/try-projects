@@ -42,72 +42,21 @@ const CustomSlider = () => {
     {
       id: 1,
       name: "Lorem Ipsum is simply",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "../../../../imageS1.png",
       descritption:
         "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
     },
     {
       id: 2,
       name: "Product 2",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "../../../../imageS2.png",
       descritption:
         "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
     },
     {
       id: 3,
       name: "Product 3",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      descritption:
-        "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
-    },
-    {
-      id: 4,
-      name: "Product 4",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      descritption:
-        "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
-    },
-    {
-      id: 5,
-      name: "Product 5",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      descritption:
-        "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
-    },
-    {
-      id: 6,
-      name: "Product 6",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      descritption:
-        "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
-    },
-    {
-      id: 7,
-      name: "Product 7",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      descritption:
-        "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
-    },
-    {
-      id: 8,
-      name: "Product 8",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      descritption:
-        "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
-    },
-    {
-      id: 9,
-      name: "Product 9",
-      image:
-        "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "../../../../imageS3.png",
       descritption:
         "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
     },

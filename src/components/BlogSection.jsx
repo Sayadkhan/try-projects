@@ -2,8 +2,8 @@ import React from "react";
 
 const BlogSection = () => {
   return (
-    <div>
-      <div className="grid grid-cols-[50%_50%] gap-5 text-white">
+    <div className="w-[1320px] flex items-center justify-center container mx-auto">
+      <div className="flex gap-5 text-white">
         <div className="w-[757px] rounded-[24px] border-[0.6px] p-[24px]">
           <div>
             <div>

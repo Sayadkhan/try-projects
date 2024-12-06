@@ -6,7 +6,7 @@ import BlogSection from "../components/BlogSection";
 
 const Resourses = () => {
   return (
-    <div className="container mx-auto bg-[#020A22]">
+    <div className=" flex flex-col gap-5">
       <HeroComponents />
 
       <div>
@@ -19,10 +19,10 @@ const Resourses = () => {
         </div>
       </div>
 
-      <div>
-        <SectionTitle title={"most popular blog"} />
+      <div className="flex flex-col gap-10 my-10">
+        <SectionTitle title={"Most Popular Blog"} />
 
-        <div>
+        <div className="container mx-auto">
           <BlogSection />
         </div>
       </div>
