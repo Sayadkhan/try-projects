@@ -4,7 +4,7 @@ const HeroComponents = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10 px-4 py-10">
         {/* Image Section */}
 
-        <div className="w-full md:w-[520px] h-auto md:h-[551.59px] lg:hidden md:block">
+        <div className="w-full md:w-[520px] h-auto md:h-[551.59px] lg:hidden block">
           <img
             src="../../../image1.png"
             alt="Hero Image"
@@ -42,7 +42,7 @@ const HeroComponents = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[520px] h-auto md:h-[551.59px] lg:block md:hidden">
+        <div className="w-full md:w-[520px] h-auto md:h-[551.59px] lg:block hidden">
           <img
             src="../../../image1.png"
             alt="Hero Image"
