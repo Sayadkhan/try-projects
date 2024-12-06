@@ -28,20 +28,30 @@ const CustomSlider = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
   };
+
   const products = [
     {
       id: 1,
-      name: "Lorem Ipsum is simply",
+      name: "Lorem Ipsum is simply",
       image: "../../../../imageS1.png",
       descritption:
         "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
@@ -78,13 +88,14 @@ const CustomSlider = () => {
           afterChange={(current) => setSlider(sliderRef.current)} // Save the slider instance
         >
           {products.map((product) => (
-            <div key={product.id} className="">
+            <div key={product.id} className="px-2">
               <ReviewCarts product={product} />
             </div>
           ))}
         </Slider>
       </Suspense>
 
+      {/* Custom prev/next buttons */}
       <div className="flex justify-center mt-4 space-x-4">
         <button
           onClick={goToPrev}
@@ -94,7 +105,7 @@ const CustomSlider = () => {
         </button>
         <button
           onClick={goToNext}
-          className="border w-[40px] h-[40px] text-white p-2 rounded-full flex items-center justify-center hover:bg-[#13D28A]  focus:outline-none duration-300"
+          className="border w-[40px] h-[40px] text-white p-2 rounded-full flex items-center justify-center hover:bg-[#13D28A] focus:outline-none duration-300"
         >
           <GrNext className="text-4xl" />
         </button>

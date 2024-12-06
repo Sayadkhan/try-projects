@@ -6,13 +6,14 @@ import BlogSection from "../components/BlogSection";
 
 const Resourses = () => {
   return (
-    <div className=" flex flex-col gap-5">
+    <div className="flex flex-col items-center justify-center gap-5 container mx-auto">
       <HeroComponents />
 
       <div>
         <SectionTitle title={"Helpful Tools"} />
 
-        <div className="flex gap-10 items-center justify-center">
+        {/* Use responsive flex to wrap the cards on smaller screens */}
+        <div className="flex flex-wrap gap-10 items-center justify-center ">
           <HelpfullToolsCard />
           <HelpfullToolsCard />
           <HelpfullToolsCard />
@@ -22,7 +23,8 @@ const Resourses = () => {
       <div className="flex flex-col gap-10 my-10">
         <SectionTitle title={"Most Popular Blog"} />
 
-        <div className="container mx-auto">
+        {/* Adjust container for responsive padding */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <BlogSection />
         </div>
       </div>

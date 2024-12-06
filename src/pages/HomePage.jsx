@@ -8,29 +8,31 @@ import HeroSection from "./../components/HeroSection";
 const HomePage = () => {
   return (
     <div className="bg-[#020A22]">
-      <div className="">
+      <div className="container mx-auto px-4">
         <HeroSection />
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center py-8">
           <AboutMe />
         </div>
+
         {/* My service Section */}
-        <div className="flex flex-col items-center justify-center gap-[42px] h-[580px]">
+        <div className="flex flex-col items-center justify-center gap-[42px] h-auto py-8">
           <SectionTitle
             title="My services"
             description="Advanced Data Analytics as a Service"
           />
-          <div className="flex gap-[32px]">
+          <div className="flex flex-wrap gap-[32px] justify-center">
             <MyServiceSection />
             <MyServiceSection />
             <MyServiceSection />
           </div>
         </div>
+
         {/* SuccessStory Section */}
-        <div>
+        <div className="py-8">
           <CustomSlider />
         </div>
 
-        <div>
+        <div className="py-8">
           <ContactSection />
         </div>
       </div>

@@ -3,40 +3,39 @@ import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
-    <div className="w-[1317px] border-[0.7px] p-[32px] text-white">
-      <div className="flex justify-between">
-        <div className="w-[208px]">
-          <div className="flex flex-col gap-5  justify-between mb-4">
-            <h2 className="font-[700] text-[40px] leading-[40px]">About Me</h2>
-            <img
-              src="../../../image.png"
-              alt="Nimrod Fisher"
-              className="rounded-[12px]  w-[208px]"
-            />
-            <div className="flex flex-col gap-5">
-              <h2 className="font-[600] text-[24px] leading-[24px]">
-                Nimrod Fisher
-              </h2>
-              <div className="flex gap-5">
-                <a
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-2xl text-gray-300 hover:text-white transition-colors duration-300"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="mailto:example@email.com"
-                  className="text-2xl text-gray-300 hover:text-white transition-colors duration-300"
-                >
-                  <FaEnvelope />
-                </a>
-              </div>
+    <div className="w-full max-w-screen-lg mx-auto border-[0.7px] p-[32px] text-white">
+      <div className="flex flex-col lg:flex-row justify-between gap-8">
+        <div className="lg:w-[208px] w-full flex flex-col gap-5 justify-between mb-4">
+          <h2 className="font-[700] text-[40px] leading-[40px]">About Me</h2>
+          <img
+            src="../../../image.png"
+            alt="Nimrod Fisher"
+            className="rounded-[12px] w-full max-w-[208px] mx-auto"
+          />
+          <div className="flex flex-col gap-5">
+            <h2 className="font-[600] text-[24px] leading-[24px] text-center">
+              Nimrod Fisher
+            </h2>
+            <div className="flex justify-center gap-5">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="mailto:example@email.com"
+                className="text-2xl text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                <FaEnvelope />
+              </a>
             </div>
           </div>
         </div>
-        <div className="w-[997px]">
+
+        <div className="lg:w-[70%] w-full text-center lg:text-left">
           <p className="text-gray-300 mb-8">
             I'm A Dedicated Data Analytics Expert With A Passion For Solving
             Business And Product Challenges Through Data - And Using It Wisely
@@ -44,7 +43,7 @@ const AboutMe = () => {
             High-Value Opportunities Within Organizations - Opportunities That
             Often Go Unnoticed But Can Make A Measurable Impact.
           </p>
-          <p className="text-gray-300">
+          <p className="text-gray-300 mb-8">
             With Over A Decade Of Experience, I've Worked Across Diverse
             Industries And Company Sizes - Solving Complex Challenges And
             Transforming Oceans Of Data Into Strategic Assets. What Motivates Me
