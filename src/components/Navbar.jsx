@@ -4,6 +4,11 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+
   const links = [
     { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
@@ -21,14 +26,21 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-6 flex-1 justify-center">
         {links.map((link) => (
           <NavLink
+            onClick={() => {
+              if (["HOME", "CONTACT", "RESOURCES"].includes(link.name)) {
+                scrollToTop();
+              }
+            }}
             key={link.path}
             to={link.path}
             className={({ isActive }) =>
               `hover:text-gray-200 ${isActive ? "text-white" : ""}`
             }
+
           >
             {link.name}
           </NavLink>
+
         ))}
       </div>
 
@@ -62,13 +74,19 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hover:text-gray-200 ${isActive ? "text-white" : ""}`
               }
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                if (["HOME", "CONTACT", "RESOURCES"].includes(link.name)) {
+                  scrollToTop();
+                }
+                setIsMobileMenuOpen(false);
+              }}
             >
               {link.name}
             </NavLink>
+
           ))}
           <NavLink
-            to="/talk"
+            to="contact"
             className="bg-[--btn-bg] hover:bg-green-600 text-white  py-2 rounded"
             onClick={() => setIsMobileMenuOpen(false)}
           >
@@ -79,7 +97,7 @@ const Navbar = () => {
 
       <div className="hidden md:block">
         <NavLink
-          to="/talk"
+          to="/contact"
           className="bg-[--btn-bg] hover:bg-green-600 text-white px-4 py-2 rounded"
         >
           LET'S TALK

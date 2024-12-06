@@ -42,7 +42,6 @@ const ContactSection = () => {
         }
       );
 
-    // Reset form after submission
     setFormData({
       firstName: "",
       lastName: "",
@@ -66,7 +65,7 @@ const ContactSection = () => {
 
         <div className="max-w-5xl mx-auto bg-gradient-to-b from-[--form-bg] to-gray-900 p-8 rounded-lg shadow-md border-[0.7px] border-green-900">
           <form
-            ref={form} // Reference to the form
+            ref={form}
             onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >

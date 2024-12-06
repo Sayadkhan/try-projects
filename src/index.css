@@ -18,3 +18,13 @@
   display: flex; /* Ensures each slide takes full height */
   justify-content: center; /* Optional, to center content within each slide */
 }
+
+:root {
+  --main-bg-color: #f0f0f0;
+  --primary-color: #3498db;
+  --btn-bg: rgba(19, 210, 138, 1);
+  --bg : rgba(2, 10, 34, 1);
+  --form-bg : rgba(20, 27, 47, 0.1);
+  --c1: rgba(57, 255, 118, 0.5);
+  --c2: rgba(69, 136, 255, 0.5);
+}
