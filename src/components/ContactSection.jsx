@@ -10,7 +10,7 @@ const ContactSection = () => {
     message: "",
   });
 
-  const form = useRef(); // Use the ref to access the form
+  const form = useRef();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -23,13 +23,12 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = "service_n17rmf7"; // Replace with your Service ID
-    const templateID = "template_yhxibka"; // Replace with your Template ID
-
+    const serviceID = "service_n17rmf7";
+    const templateID = "template_yhxibka";
     // Send the form data via EmailJS
     emailjs
       .sendForm(serviceID, templateID, form.current, {
-        publicKey: "OTWuq16WTObLyUpO8", // Replace with your User Public Key
+        publicKey: "OTWuq16WTObLyUpO8",
       })
       .then(
         (response) => {
