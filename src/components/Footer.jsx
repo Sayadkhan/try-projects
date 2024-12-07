@@ -4,7 +4,7 @@ import Copyright from "./Copyright";
 
 const Footer = () => {
   return (
-    <footer className="text-white pt-8 relative">
+    <footer className="text-white pt-8 relative flex flex-col gap-5">
       <div className="container justify-items-center mx-auto  px-4">
         <div className="grid max-w-7xl r grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -107,8 +107,8 @@ const Footer = () => {
 
       <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl top-0 left-0"></div>
       <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl top-0 right-0"></div>
-      <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl  left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+      {/* <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl  left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> */}
+      {/* <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> */}
     </footer>
   );
 };

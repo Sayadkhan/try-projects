@@ -29,7 +29,7 @@ const HomePage = () => {
             <MyServiceSection />
           </div>
 
-          <Link to="/contact" className="mt-8">
+          <Link to="/contact" className="">
             <button className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 transition  duration-300">
               LET'S TALK!
             </button>
