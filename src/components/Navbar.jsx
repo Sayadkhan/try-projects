@@ -1,47 +1,54 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const location = useLocation();
+  const navigate = useNavigate();
+  const NAVBAR_HEIGHT = 70;
 
   const handleScrollToSection = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+      return;
+    }
+
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - NAVBAR_HEIGHT;
 
-      setTimeout(() => {
-        window.scrollBy({ top: -70, left: 0, behavior: "smooth" });
-      }, 300);
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
-  const simulateDoubleClick = (link) => {
-    if (link.id) {
-      handleScrollToSection(link.id); 
-      setTimeout(() => handleScrollToSection(link.id), 300);
-    } else {
-      scrollToTop(); 
-      setTimeout(scrollToTop, 300);
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ 
+      top: 0, 
+      behavior: "smooth" 
+    });
   };
 
-  const handleLinkClick = (link) => {
-    if (
-      link.name === "ABOUT" ||
-      link.name === "SERVICES" ||
-      link.name === "CONTACT" ||
-      link.name === "LET'S TALK"
-    ) {
-      simulateDoubleClick(link);
-    } else if (link.name !== "SERVICES" && link.name !== "ABOUT") {
-      scrollToTop();
+  useEffect(() => {
+    const state = location.state ;
+    if (state && state.scrollTo) {
+      const section = document.getElementById(state.scrollTo);
+      if (section) {
+        const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - NAVBAR_HEIGHT;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+      
+      window.history.replaceState({}, document.title);
     }
-    setIsMobileMenuOpen(false);
-  };
+  }, [location.state]);
 
   const links = [
     { name: "HOME", path: "/" },
@@ -54,16 +61,21 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 sticky top-0 text-gray-400 h-[70px] px-[10%] flex items-center justify-between z-[99999]">
       <div className="flex items-center">
-        <img src="/logo.png" alt="Logo" className="h-[50px]" />
+        <img src="/logo.png" alt="TDHH Logo" className="h-[50px]" />
       </div>
 
-    
       <div className="hidden md:flex space-x-6 flex-1 justify-center">
         {links.map((link) => (
           <NavLink
             key={link.name}
             to={link.path}
-            onClick={() => handleLinkClick(link)}
+            onClick={() => {
+              if (link.name === "ABOUT" || link.name === "SERVICES") {
+                handleScrollToSection(link.id);
+              } else {
+                scrollToTop();
+              }
+            }}
             className={({ isActive }) =>
               `text-gray-400 hover:text-gray-200 ${
                 isActive ? "text-white" : ""
@@ -75,7 +87,6 @@ const Navbar = () => {
         ))}
       </div>
 
-     
       <button
         className="md:hidden text-gray-400 focus:outline-none"
         onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -99,11 +110,18 @@ const Navbar = () => {
 
       {isMobileMenuOpen && (
         <div className="absolute top-[70px] left-0 w-full bg-gray-900 text-center flex flex-col space-y-4 py-4 md:hidden">
-          {links.map((link) => (
+          {links.map((link, index) => (
             <NavLink
-              key={link.name}
+              key={index}
               to={link.path}
-              onClick={() => handleLinkClick(link)}
+              onClick={() => {
+                if (link.name === "ABOUT" || link.name === "SERVICES") {
+                  handleScrollToSection(link.id);
+                } else {
+                  scrollToTop();
+                }
+                setIsMobileMenuOpen(false);
+              }}
               className={({ isActive }) =>
                 `text-gray-400 hover:text-gray-200 ${
                   isActive ? "text-white" : ""
@@ -114,21 +132,19 @@ const Navbar = () => {
             </NavLink>
           ))}
           <NavLink
-            to="/contact"
+            to="contact"
             className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 duration-300"
-            onClick={() => handleLinkClick({ name: "LET'S TALK" })}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             LET'S TALK
           </NavLink>
         </div>
       )}
 
-     
       <div className="hidden md:block">
         <NavLink
           to="/contact"
           className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 duration-300"
-          onClick={() => handleLinkClick({ name: "LET'S TALK" })}
         >
           LET'S TALK
         </NavLink>
@@ -138,6 +154,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
