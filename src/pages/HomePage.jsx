@@ -11,7 +11,7 @@ const HomePage = () => {
     <div className="bg-[#020A22]">
       <div className="px-4">
         <HeroSection />
-        <div id="about" className="flex items-center justify-center py-8 ">
+        <div id="about" className="flex items-center justify-center py-8">
           <AboutMe />
         </div>
 

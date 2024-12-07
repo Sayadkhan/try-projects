@@ -4,8 +4,8 @@ import Copyright from "./Copyright";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-800 to-gray-900 text-white pt-8">
-      <div className="container justify-items-center mx-auto mb-8 px-4">
+    <footer className="text-white pt-8 relative">
+      <div className="container justify-items-center mx-auto  px-4">
         <div className="grid max-w-7xl r grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center">
@@ -35,30 +35,47 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg">Quick Links</h3>
-            <ul className="mt-2 space-y-2">
+            <h3 className="font-[600] text-[24px] leading-[24px] text-[#FFFFFFF2]">
+              Quick Links
+            </h3>
+            <ul className="mt-5 space-y-2 flex flex-col">
               <li>
-                <a href="#" className="hover:text-teal-400 transition">
+                <a
+                  href="#"
+                  className="font-[400] text-[16px] leading-[24px] text-[#FFFFFFE5] hover:text-teal-400 transition"
+                >
                   [PODCAST] Data Analytics & AI (Hebrew)
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-400 transition">
+                <a
+                  href="#"
+                  className="font-[400] text-[16px] leading-[24px] text-[#FFFFFFE5] hover:text-teal-400 transition"
+                >
                   FREE NPS Analysis Tool
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-400 transition">
+                <a
+                  href="#"
+                  className="font-[400] text-[16px] leading-[24px] text-[#FFFFFFE5] hover:text-teal-400 transition"
+                >
                   [POST] Simplifying Analytics For Real Growth
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-400 transition">
+                <a
+                  href="#"
+                  className="font-[400] text-[16px] leading-[24px] text-[#FFFFFFE5] hover:text-teal-400 transition"
+                >
                   [POST] Maximizing Your NPS Analysis Impact
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-400 transition">
+                <a
+                  href="#"
+                  className="font-[400] text-[16px] leading-[24px] text-[#FFFFFFE5] hover:text-teal-400 transition"
+                >
                   [POST] Identify And Re-Engage With Your At-Risk Customers
                 </a>
               </li>
@@ -87,6 +104,11 @@ const Footer = () => {
         </div>
       </div>
       <Copyright />
+
+      <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl top-0 left-0"></div>
+      <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl top-0 right-0"></div>
+      <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl  left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute w-52 h-52 rounded-full bg-white/5 blur-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
     </footer>
   );
 };

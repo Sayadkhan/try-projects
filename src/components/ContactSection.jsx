@@ -51,7 +51,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[--bg] to-gray-800 text-white py-20 px-4 sm:px-8">
+    <section className="bg-[] text-white py-20 px-4 sm:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4">Let’s Talk</h2>
@@ -62,7 +62,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto bg-gradient-to-b from-[--form-bg] to-gray-900 p-8 rounded-lg shadow-md border-[0.7px] border-green-900">
+        <div className="max-w-5xl mx-auto p-8 rounded-lg shadow-md border-[0.7px] border-green-900">
           <form
             ref={form}
             onSubmit={handleSubmit}
@@ -70,7 +70,7 @@ const ContactSection = () => {
           >
             <div>
               <label
-                className="block text-sm font-medium mb-2"
+                className="block text-[16px] font-[500] leading-[24px] mb-2"
                 htmlFor="firstName"
               >
                 First name
@@ -82,13 +82,13 @@ const ContactSection = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 placeholder="Enter First name"
-                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-[24px] py-[17px] bg-[#131B31] border-[0.8px] border-[#FFFFFF33] rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
             <div>
               <label
-                className="block text-sm font-medium mb-2"
+                className="block text-[16px] font-[500] leading-[24px] mb-2"
                 htmlFor="lastName"
               >
                 Last name
@@ -100,12 +100,15 @@ const ContactSection = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 placeholder="Enter Last name"
-                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-[24px] py-[17px] bg-[#131B31] border-[0.8px] border-[#FFFFFF33] rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2" htmlFor="email">
+              <label
+                className="block text-[16px] font-[500] leading-[24px] mb-2"
+                htmlFor="email"
+              >
                 Email address
               </label>
               <input
@@ -115,13 +118,13 @@ const ContactSection = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter email address"
-                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-[24px] py-[17px] bg-[#131B31] border-[0.8px] border-[#FFFFFF33] rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
             <div>
               <label
-                className="block text-sm font-medium mb-2"
+                className="block text-[16px] font-[500] leading-[24px] mb-2"
                 htmlFor="companyName"
               >
                 Company name
@@ -133,13 +136,13 @@ const ContactSection = () => {
                 value={formData.companyName}
                 onChange={handleChange}
                 placeholder="Enter Company name"
-                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-[24px] py-[17px] bg-[#131B31] border-[0.8px] border-[#FFFFFF33] rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
             <div className="md:col-span-2">
               <label
-                className="block text-sm font-medium mb-2"
+                className="block text-[16px] font-[500] leading-[24px] mb-2"
                 htmlFor="message"
               >
                 Message
@@ -150,7 +153,7 @@ const ContactSection = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Write your message here..."
-                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 h-32"
+                className="w-full px-[24px] py-[17px] bg-[#131B31] border-[0.8px] border-[#FFFFFF33] rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500"
               ></textarea>
             </div>
 
