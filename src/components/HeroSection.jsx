@@ -1,4 +1,5 @@
 import React from "react";
+import { IoChevronDownSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const HeroSection = ({ handleScrollToAbout }) => {
@@ -21,7 +22,7 @@ const HeroSection = ({ handleScrollToAbout }) => {
           Start Small, Build Smarter, Analyze Deeper, And Grow Faster.
         </p>
 
-        <div className="flex items-center justify-center mt-8">
+        <div className="flex items-center justify-center mt-10">
           <img src="../../../Animation - 1733311362189.gif" alt="" />
         </div>
         <div className="mt-8">
@@ -33,26 +34,13 @@ const HeroSection = ({ handleScrollToAbout }) => {
         </div>
 
         {/* Downward Arrow */}
-        <div className="mt-10 flex items-center justify-center">
+        <div className="mt-12 flex items-center justify-center">
           <div
             onClick={handleScrollToAbout}
-            className="w-20 h-20 border-[0.7px] border-green-600 rounded-full flex items-center justify-center cursor-pointer"
+            className="w-32 h-32 border-[0.7px] border-green-600 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer duration-300"
           >
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 mx-auto text-gray-300 hover:text-white transition duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              <IoChevronDownSharp className="text-3xl" />
             </div>
           </div>
         </div>
