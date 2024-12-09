@@ -16,7 +16,7 @@ const Resourses = () => {
         <SectionTitle title={"Helpful Tools"} />
 
         {/* Use responsive flex to wrap the cards on smaller screens */}
-        <div className="flex flex-wrap gap-10 items-center justify-center ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center ">
           <HelpfullToolsCard />
           <HelpfullToolsCard />
           <HelpfullToolsCard />

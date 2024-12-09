@@ -77,7 +77,11 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 sticky top-0 text-gray-400 h-[70px] px-[10%] flex items-center justify-between z-[99999]">
       <div className="flex items-center">
-        <img src="/logo.png" alt="TDHH Logo" className="h-[50px]" />
+        <img
+          src="../../../logo/image.png"
+          alt="TDHH Logo"
+          className="h-[50px]"
+        />
       </div>
 
       <div className="hidden md:flex space-x-6 flex-1 justify-center">

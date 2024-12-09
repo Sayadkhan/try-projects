@@ -71,7 +71,7 @@ const HomePage = () => {
             title="My services"
             description="Advanced Data Analytics as a Service"
           />
-          <div className="flex flex-wrap gap-[32px] justify-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[32px] justify-center">
             {data.map((service) => (
               <MyServiceSection key={service.id} service={service} />
             ))}
@@ -85,9 +85,9 @@ const HomePage = () => {
         </div>
 
         {/* SuccessStory Section */}
-        <div className="py-8">
+        {/* <div className="py-8">
           <CustomSlider />
-        </div>
+        </div> */}
 
         <div className="py-8">
           <ContactSection />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-b from-[--bg] to-[--bg] text-white flex items-center justify-center  md:h-[656px] lg:h-[756.24px]">
+    <section className="relative bg-gradient-to-b from-[--bg] to-[--bg] text-white flex items-center justify-center md:h-[656px] lg:h-[756.24px]">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 w-full"
         style={{
@@ -20,12 +20,37 @@ const HeroSection = () => {
         <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300">
           Start Small, Build Smarter, Analyze Deeper, And Grow Faster.
         </p>
+
+        <div className="flex items-center justify-center">
+          <img src="../../../Animation - 1733311362189.gif" alt="" />
+        </div>
         <div className="mt-8">
           <Link to="/contact">
             <button className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-6 py-3 md:px-8 md:py-4 transition duration-300">
               LET'S TALK!
             </button>
           </Link>
+        </div>
+        {/* Downward Arrow */}
+        <div className="mt-6 flex items-center justify-center">
+          <div className="w-16 h-16 border-[0.7px] border-green-600 rounded-full flex items-center justify-center">
+            <a href="#next-section" aria-label="Scroll down">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mx-auto text-gray-300 hover:text-white transition duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
