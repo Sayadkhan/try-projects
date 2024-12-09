@@ -58,14 +58,14 @@ const CustomSlider = () => {
     },
     {
       id: 2,
-      name: "Product 2",
+      name: "Lorem Ipsum is simply",
       image: "../../../../imageS2.png",
       descritption:
         "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
     },
     {
       id: 3,
-      name: "Product 3",
+      name: "Lorem Ipsum is simply",
       image: "../../../../imageS3.png",
       descritption:
         "An award-winning visionary entrepreneur who left her previous job as a bank teller to build the first social enterprise hostel in Myanmar",
