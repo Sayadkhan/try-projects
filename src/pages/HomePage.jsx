@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import AboutMe from "../components/AboutMe";
 import ContactSection from "../components/ContactSection";
 import MyServiceSection from "../components/MyServiceSection";
@@ -7,6 +8,29 @@ import CustomSlider from "../components/Slider/CustomSilder";
 import HeroSection from "./../components/HeroSection";
 
 const HomePage = () => {
+  const location = useLocation();
+
+  // Scroll to the section based on the passed state
+  useEffect(() => {
+    const state = location.state;
+    if (state && state.scrollTo) {
+      const sectionId = state.scrollTo;
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const NAVBAR_HEIGHT = 70; // Adjust the navbar height
+        const elementPosition =
+          section.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - NAVBAR_HEIGHT;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+      window.history.replaceState({}, document.title); // Clean up state to avoid repeating on refresh
+    }
+  }, [location.state]);
+
   const data = [
     {
       id: 1,
@@ -30,6 +54,7 @@ const HomePage = () => {
         "Leverage advanced analytics and AI to shape your retention strategy - measure churn, segment customers dynamically, and define KPIs like LTV, churn rate, and retention benchmarks. Drive actionable insights to boost loyalty and maximize customer value.",
     },
   ];
+
   return (
     <div className="bg-[#020A22]">
       <div className="px-4">
@@ -50,13 +75,10 @@ const HomePage = () => {
             {data.map((service) => (
               <MyServiceSection key={service.id} service={service} />
             ))}
-
-            {/* <MyServiceSection />
-            <MyServiceSection /> */}
           </div>
 
           <Link to="/contact" className="">
-            <button className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 transition  duration-300">
+            <button className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 transition duration-300">
               LET'S TALK!
             </button>
           </Link>

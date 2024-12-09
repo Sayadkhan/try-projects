@@ -10,7 +10,7 @@ const Navbar = () => {
   // Handle scrolling to a section
   const handleScrollToSection = (sectionId) => {
     if (location.pathname !== "/") {
-      // Navigate to the homepage, passing scrollTo state
+      // Navigate to the homepage and pass the section ID in the state
       navigate("/", { state: { scrollTo: sectionId } });
     } else {
       // Scroll directly if already on the homepage
@@ -32,24 +32,20 @@ const Navbar = () => {
     }
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
-    // Check for scrollTo state when the page loads
     const state = location.state;
     if (state && state.scrollTo) {
-      // Delay the scroll by 50ms to allow navigation to complete
       setTimeout(() => {
         scrollToSection(state.scrollTo);
       }, 50); // Adding a short delay ensures smooth navigation first
       window.history.replaceState({}, document.title); // Clean up state to avoid repeating on refresh
     }
   }, [location.state]);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on every route change
+  }, [location]);
 
   const links = [
     { name: "HOME", path: "/" },
@@ -66,26 +62,33 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex space-x-6 flex-1 justify-center">
-        {links.map((link) => (
-          <NavLink
-            key={link.name}
-            to={link.path}
-            onClick={() => {
-              if (link.name === "ABOUT" || link.name === "SERVICES") {
-                handleScrollToSection(link.id);
-              } else {
-                scrollToTop();
-              }
-            }}
-            className={({ isActive }) =>
-              `text-gray-400 hover:text-gray-200 ${
-                isActive ? "text-white" : ""
-              } px-4 py-2`
-            }
-          >
-            {link.name}
-          </NavLink>
-        ))}
+        {links.map((link) => {
+          if (link.name === "ABOUT" || link.name === "SERVICES") {
+            return (
+              <button
+                key={link.name}
+                onClick={() => handleScrollToSection(link.id)} // Handle scrolling
+                className="text-gray-400 hover:text-gray-200 px-4 py-2"
+              >
+                {link.name}
+              </button>
+            );
+          } else {
+            return (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                className={({ isActive }) =>
+                  `text-gray-400 hover:text-gray-200 ${
+                    isActive ? "text-white" : ""
+                  } px-4 py-2`
+                }
+              >
+                {link.name}
+              </NavLink>
+            );
+          }
+        })}
       </div>
 
       <button
@@ -111,27 +114,33 @@ const Navbar = () => {
 
       {isMobileMenuOpen && (
         <div className="absolute top-[70px] left-0 w-full bg-gray-900 text-center flex flex-col space-y-4 py-4 md:hidden">
-          {links.map((link, index) => (
-            <NavLink
-              key={index}
-              to={link.path}
-              onClick={() => {
-                if (link.name === "ABOUT" || link.name === "SERVICES") {
-                  handleScrollToSection(link.id);
-                } else {
-                  scrollToTop();
-                }
-                setIsMobileMenuOpen(false);
-              }}
-              className={({ isActive }) =>
-                `text-gray-400 hover:text-gray-200 ${
-                  isActive ? "text-white" : ""
-                } px-4 py-2`
-              }
-            >
-              {link.name}
-            </NavLink>
-          ))}
+          {links.map((link, index) => {
+            if (link.name === "ABOUT" || link.name === "SERVICES") {
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleScrollToSection(link.id)} // Handle scrolling
+                  className="text-gray-400 hover:text-gray-200 px-4 py-2"
+                >
+                  {link.name}
+                </button>
+              );
+            } else {
+              return (
+                <NavLink
+                  key={index}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `text-gray-400 hover:text-gray-200 ${
+                      isActive ? "text-white" : ""
+                    } px-4 py-2`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              );
+            }
+          })}
           <NavLink
             to="contact"
             className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 duration-300"
