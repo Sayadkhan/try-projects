@@ -12,6 +12,7 @@ const Navbar = () => {
   // Handle scrolling to a section
   const handleScrollToSection = (sectionId) => {
     setSection(true);
+    setActiveSection(sectionId);
     if (location.pathname !== "/") {
       // Navigate to the homepage and pass the section ID in the state
       navigate("/", { state: { scrollTo: sectionId } });
