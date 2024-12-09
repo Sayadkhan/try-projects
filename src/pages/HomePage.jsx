@@ -66,32 +66,8 @@ const HomePage = () => {
   return (
     <div className="bg-[#020A22]">
       <div className="px-4">
-        <HeroSection />
+        <HeroSection handleScrollToAbout={handleScrollToAbout} />
 
-        {/* Downward Arrow */}
-        <div className="mt-6 flex items-center justify-center">
-          <div
-            onClick={handleScrollToAbout}
-            className="w-16 h-16 border-[0.7px] border-green-600 rounded-full flex items-center justify-center cursor-pointer"
-          >
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 mx-auto text-gray-300 hover:text-white transition duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
         <div
           ref={aboutRef}
           id="about"
@@ -114,11 +90,11 @@ const HomePage = () => {
             ))}
           </div>
 
-          <Link to="/contact" className="">
+          {/* <Link to="/contact" className="">
             <button className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 transition duration-300">
               LET'S TALK!
             </button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* SuccessStory Section */}

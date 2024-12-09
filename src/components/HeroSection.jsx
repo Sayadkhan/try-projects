@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HeroSection = () => {
+const HeroSection = ({ handleScrollToAbout }) => {
   return (
     <section className="relative bg-gradient-to-b from-[--bg] to-[--bg] text-white flex items-center justify-center md:h-[656px] lg:h-[756.24px]">
       <div
@@ -21,7 +21,7 @@ const HeroSection = () => {
           Start Small, Build Smarter, Analyze Deeper, And Grow Faster.
         </p>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mt-8">
           <img src="../../../Animation - 1733311362189.gif" alt="" />
         </div>
         <div className="mt-8">
@@ -30,6 +30,31 @@ const HeroSection = () => {
               LET'S TALK!
             </button>
           </Link>
+        </div>
+
+        {/* Downward Arrow */}
+        <div className="mt-10 flex items-center justify-center">
+          <div
+            onClick={handleScrollToAbout}
+            className="w-20 h-20 border-[0.7px] border-green-600 rounded-full flex items-center justify-center cursor-pointer"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mx-auto text-gray-300 hover:text-white transition duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>

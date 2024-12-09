@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .slick-list {
   display: flex;
   gap: 10px; /* This is where the gap between the cards will be applied */

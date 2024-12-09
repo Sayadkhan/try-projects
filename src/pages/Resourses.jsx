@@ -12,7 +12,7 @@ const Resourses = () => {
 
       <ImageSlider />
 
-      <div>
+      <div className="mt-10">
         <SectionTitle title={"Helpful Tools"} />
 
         {/* Use responsive flex to wrap the cards on smaller screens */}
