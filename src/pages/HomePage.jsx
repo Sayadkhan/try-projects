@@ -1,14 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AboutMe from "../components/AboutMe";
 import ContactSection from "../components/ContactSection";
 import MyServiceSection from "../components/MyServiceSection";
 import SectionTitle from "../components/SectionTitle";
-import CustomSlider from "../components/Slider/CustomSilder";
+// import CustomSlider from "../components/Slider/CustomSilder";
 import HeroSection from "./../components/HeroSection";
 
 const HomePage = () => {
   const location = useLocation();
+  const aboutRef = useRef(null); // Create a ref for the about section
 
   // Scroll to the section based on the passed state
   useEffect(() => {
@@ -55,11 +56,47 @@ const HomePage = () => {
     },
   ];
 
+  const handleScrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start", // Align to the top of the section
+    });
+  };
+
   return (
     <div className="bg-[#020A22]">
       <div className="px-4">
         <HeroSection />
-        <div id="about" className="flex items-center justify-center py-8">
+
+        {/* Downward Arrow */}
+        <div className="mt-6 flex items-center justify-center">
+          <div
+            onClick={handleScrollToAbout}
+            className="w-16 h-16 border-[0.7px] border-green-600 rounded-full flex items-center justify-center cursor-pointer"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mx-auto text-gray-300 hover:text-white transition duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          ref={aboutRef}
+          id="about"
+          className="flex items-center justify-center py-8"
+        >
           <AboutMe />
         </div>
 

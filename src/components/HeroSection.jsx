@@ -31,27 +31,6 @@ const HeroSection = () => {
             </button>
           </Link>
         </div>
-        {/* Downward Arrow */}
-        <div className="mt-6 flex items-center justify-center">
-          <div className="w-16 h-16 border-[0.7px] border-green-600 rounded-full flex items-center justify-center">
-            <a href="#next-section" aria-label="Scroll down">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 mx-auto text-gray-300 hover:text-white transition duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -11,10 +11,7 @@ const Footer = () => {
             <div className="flex items-center">
               <img src="/logo.png" alt="TDH Logo" className="h-12" />
             </div>
-            <p className="mt-2">
-              Leveraging AI For Seamless, Automated Excellence In User
-              Experience
-            </p>
+            <p className="mt-2">Turn Your Data Into A Strategic Advantage</p>
             <div className="flex space-x-4 mt-4">
               <a
                 href="#"
@@ -22,9 +19,9 @@ const Footer = () => {
               >
                 <FaLinkedinIn />
               </a>
-              <a href="#" className="text-white hover:text-gray-400 transition">
+              {/* <a href="#" className="text-white hover:text-gray-400 transition">
                 <FaFacebookF />
-              </a>
+              </a> */}
               <a
                 href="#"
                 className="text-gray-300 hover:text-gray-500 transition"

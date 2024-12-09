@@ -3,7 +3,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [section, setSection] = useState(false);
+
   const [activeSection, setActiveSection] = useState(""); // Track the active section
   const location = useLocation();
   const navigate = useNavigate();
@@ -11,7 +11,6 @@ const Navbar = () => {
 
   // Handle scrolling to a section
   const handleScrollToSection = (sectionId) => {
-    setSection(true);
     setActiveSection(sectionId);
     if (location.pathname !== "/") {
       // Navigate to the homepage and pass the section ID in the state
@@ -93,8 +92,8 @@ const Navbar = () => {
                 key={link.name}
                 onClick={() => handleScrollToSection(link.id)} // Scroll to section
                 className={`text-gray-400 hover:text-gray-200 px-4 py-2 ${
-                  activeSection === link.id ? "text-red-600" : ""
-                } `} // Apply active class if section is in view
+                  activeSection === link.id ? "text-white" : ""
+                } `}
               >
                 {link.name}
               </button>
