@@ -3,12 +3,15 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [section, setSection] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); // Track the active section
   const location = useLocation();
   const navigate = useNavigate();
   const NAVBAR_HEIGHT = 70;
 
   // Handle scrolling to a section
   const handleScrollToSection = (sectionId) => {
+    setSection(true);
     if (location.pathname !== "/") {
       // Navigate to the homepage and pass the section ID in the state
       navigate("/", { state: { scrollTo: sectionId } });
@@ -32,20 +35,35 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    const state = location.state;
-    if (state && state.scrollTo) {
-      setTimeout(() => {
-        scrollToSection(state.scrollTo);
-      }, 50); // Adding a short delay ensures smooth navigation first
-      window.history.replaceState({}, document.title); // Clean up state to avoid repeating on refresh
-    }
-  }, [location.state]);
-
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top on every route change
   }, [location]);
+
+  // Detect the currently visible section using IntersectionObserver
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id); // Set the active section based on the id
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when at least 50% of the section is in view
+      }
+    );
+
+    // Observe each section with the IDs "about", "services", etc.
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => observer.observe(section));
+
+    // Cleanup the observer when the component unmounts
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
 
   const links = [
     { name: "HOME", path: "/" },
@@ -63,12 +81,15 @@ const Navbar = () => {
 
       <div className="hidden md:flex space-x-6 flex-1 justify-center">
         {links.map((link) => {
+          // Handle "About" and "Services" with scrolling
           if (link.name === "ABOUT" || link.name === "SERVICES") {
             return (
               <button
                 key={link.name}
-                onClick={() => handleScrollToSection(link.id)} // Handle scrolling
-                className="text-gray-400 hover:text-gray-200 px-4 py-2"
+                onClick={() => handleScrollToSection(link.id)} // Scroll to section
+                className={`text-gray-400 hover:text-gray-200 px-4 py-2 ${
+                  activeSection === link.id ? "text-red-600" : ""
+                } `} // Apply active class if section is in view
               >
                 {link.name}
               </button>
@@ -115,11 +136,12 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-[70px] left-0 w-full bg-gray-900 text-center flex flex-col space-y-4 py-4 md:hidden">
           {links.map((link, index) => {
+            // Handle "About" and "Services" with scrolling in mobile menu
             if (link.name === "ABOUT" || link.name === "SERVICES") {
               return (
                 <button
                   key={index}
-                  onClick={() => handleScrollToSection(link.id)} // Handle scrolling
+                  onClick={() => handleScrollToSection(link.id)} // Scroll to section
                   className="text-gray-400 hover:text-gray-200 px-4 py-2"
                 >
                   {link.name}
