@@ -23,8 +23,76 @@
   --main-bg-color: #f0f0f0;
   --primary-color: #3498db;
   --btn-bg: rgba(19, 210, 138, 1);
-  --bg : rgba(2, 10, 34, 1);
-  --form-bg : rgba(20, 27, 47, 0.1);
+  --bg: rgba(2, 10, 34, 1);
+  --form-bg: rgba(20, 27, 47, 0.1);
   --c1: rgba(57, 255, 118, 0.5);
   --c2: rgba(69, 136, 255, 0.5);
+}
+
+/* ImageSlider.css */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider-images-wrapper {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  width: 50%; /* Show 2 images at a time */
+  height: auto;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #717171;
 }

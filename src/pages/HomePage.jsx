@@ -7,6 +7,29 @@ import CustomSlider from "../components/Slider/CustomSilder";
 import HeroSection from "./../components/HeroSection";
 
 const HomePage = () => {
+  const data = [
+    {
+      id: 1,
+      image: "../../../icons/image1.png",
+      title: "Cost-Effective Data Systems & Tools Development",
+      description:
+        "Design scalable and cost-effective data systems, integrating AI-powered tools to automate workflows, optimize analysis, and provide flexible, actionable insights for better decision-making.",
+    },
+    {
+      id: 2,
+      image: "../../../icons/image2.png",
+      title: "Strategic Data Advisory & Team Empowerment",
+      description:
+        "Develop actionable data strategies and build high-performing teams through hiring, onboarding, and mentoring. Align your organization’s data capabilities with business growth goals while fostering a culture of data-driven decision-making.",
+    },
+    {
+      id: 3,
+      image: "../../../icons/image.png",
+      title: "Retention-Focused Advanced Analytics",
+      description:
+        "Leverage advanced analytics and AI to shape your retention strategy - measure churn, segment customers dynamically, and define KPIs like LTV, churn rate, and retention benchmarks. Drive actionable insights to boost loyalty and maximize customer value.",
+    },
+  ];
   return (
     <div className="bg-[#020A22]">
       <div className="px-4">
@@ -24,9 +47,12 @@ const HomePage = () => {
             description="Advanced Data Analytics as a Service"
           />
           <div className="flex flex-wrap gap-[32px] justify-center">
-            <MyServiceSection />
-            <MyServiceSection />
-            <MyServiceSection />
+            {data.map((service) => (
+              <MyServiceSection key={service.id} service={service} />
+            ))}
+
+            {/* <MyServiceSection />
+            <MyServiceSection /> */}
           </div>
 
           <Link to="/contact" className="">

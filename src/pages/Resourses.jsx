@@ -3,11 +3,14 @@ import HeroComponents from "../components/Resourses/HeroComponents";
 import SectionTitle from "../components/SectionTitle";
 import HelpfullToolsCard from "../components/cards/HelpfullToolsCard";
 import BlogSection from "../components/BlogSection";
+import ImageSlider from "../components/Slider/ImageSlider";
 
 const Resourses = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-5 container mx-auto">
       <HeroComponents />
+
+      <ImageSlider />
 
       <div>
         <SectionTitle title={"Helpful Tools"} />

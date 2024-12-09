@@ -88,7 +88,7 @@ const CustomSlider = () => {
           afterChange={(current) => setSlider(sliderRef.current)} // Save the slider instance
         >
           {products.map((product) => (
-            <div key={product.id} className="px-2">
+            <div key={product.id} className="px-2 mx-4">
               <ReviewCarts product={product} />
             </div>
           ))}

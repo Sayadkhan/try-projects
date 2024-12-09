@@ -7,46 +7,47 @@ const Navbar = () => {
   const navigate = useNavigate();
   const NAVBAR_HEIGHT = 70;
 
+  // Handle scrolling to a section
   const handleScrollToSection = (sectionId) => {
     if (location.pathname !== "/") {
+      // Navigate to the homepage, passing scrollTo state
       navigate("/", { state: { scrollTo: sectionId } });
-      return;
+    } else {
+      // Scroll directly if already on the homepage
+      scrollToSection(sectionId);
     }
+  };
 
+  const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition =
+        section.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - NAVBAR_HEIGHT;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ 
-      top: 0, 
-      behavior: "smooth" 
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
   };
 
   useEffect(() => {
-    const state = location.state ;
+    // Check for scrollTo state when the page loads
+    const state = location.state;
     if (state && state.scrollTo) {
-      const section = document.getElementById(state.scrollTo);
-      if (section) {
-        const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - NAVBAR_HEIGHT;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
-      
-      window.history.replaceState({}, document.title);
+      // Delay the scroll by 50ms to allow navigation to complete
+      setTimeout(() => {
+        scrollToSection(state.scrollTo);
+      }, 50); // Adding a short delay ensures smooth navigation first
+      window.history.replaceState({}, document.title); // Clean up state to avoid repeating on refresh
     }
   }, [location.state]);
 
