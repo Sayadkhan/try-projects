@@ -1,6 +1,6 @@
 const MyServiceSection = ({ service }) => {
   return (
-    <div className="h-auto md:h-[448px] border-[0.7px] bg-[#FFFFFF05] border-[#13D28A99]/60 rounded-[12px] p-[24px] text-white">
+    <div className="h-auto md:h-[448px] border-[0.7px] bg-[#FFFFFF05] mx-2 border-[#13D28A99]/60 rounded-[12px] p-[24px] text-white">
       <div className="flex flex-col gap-[24px]">
         <div className="font-poppins w-[32px] h-[32px]">
           <img
@@ -11,7 +11,7 @@ const MyServiceSection = ({ service }) => {
         </div>
 
         <div className="w-[320px] lg:w-[371px] h-[72px]">
-          <p className="font-[700] text-[24px] leading-[36px] font-montserrat">
+          <p className="font-[700] text-[20px] sm:text-[24px] md:text-[28px] leading-[36px] font-montserrat">
             {service.title}
           </p>
         </div>

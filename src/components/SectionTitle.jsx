@@ -4,7 +4,7 @@ const SectionTitle = ({ title, description }) => {
   return (
     <div className="flex flex-col gap-[16px]">
       <div>
-        <p className="text-[48px] font-[700] text-center leading-[48px] font-montserrat text-[#FFFFFF]">
+        <p className="text-[38px] md:text-[48px] font-[700] text-center leading-[48px] font-montserrat text-[#FFFFFF]">
           {title}
         </p>
       </div>

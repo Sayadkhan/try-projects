@@ -3,7 +3,7 @@ import { IoIosStar } from "react-icons/io";
 
 const RattingCard = ({ info }) => {
   return (
-    <div className="w-full max-w-[419px] rounded-[12px] border-[0.7px] p-[24px] border-[#13D28A99] text-white relative">
+    <div className="w-full max-w-[419px] h-80 rounded-[12px] border-[0.7px] p-[24px] border-[#13D28A99] text-white relative">
       <div className="flex flex-col gap-5 relative">
         {/* Profile Section */}
         <div className="flex items-center gap-4">

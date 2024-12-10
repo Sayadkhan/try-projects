@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container justify-items-center mx-auto  px-4">
         <div className="grid max-w-7xl r grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center w-[72px] h-[72px]">
+            <div className="flex items-center w-[90px] h-[90px]">
               <img
-                src="../../../logo/logo3.png"
+                src="../../../../logo4-removebg-preview.png"
                 alt="TDH Logo"
                 className="w-full h-full object-cover"
               />

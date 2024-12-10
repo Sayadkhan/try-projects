@@ -1,6 +1,6 @@
 import React from "react";
 
-const HelpfullToolsCard = () => {
+const HelpfullToolsCard = ({ info }) => {
   return (
     <div className="h-auto sm:h-[357px] border-[0.7px] rounded-[12px] p-[24px] flex flex-col items-center justify-center border-[#13D28A99]/60 text-white">
       {/* Icon Container */}

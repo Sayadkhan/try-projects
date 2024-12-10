@@ -18,8 +18,8 @@ const App = () => {
 
       <div className="w-[213px] h-[213px] rounded-full bg-white/10 blur-2xl absolute top-5 left-0"></div>
       <div className="w-[213px] h-[213px] rounded-full bg-white/10 blur-2xl absolute top-5 right-0"></div>
-      <div className="absolute w-[213px] h-[213px] rounded-full bg-white/5 blur-2xl  left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute w-[213px] h-[213px] rounded-full bg-white/5 blur-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+      {/* <div className="absolute w-[213px] h-[213px] rounded-full bg-white/5 blur-2xl  left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> */}
+      {/* <div className="absolute w-[213px] h-[213px] rounded-full bg-white/5 blur-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> */}
 
       <Footer />
     </div>

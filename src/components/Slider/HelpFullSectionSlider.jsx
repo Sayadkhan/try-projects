@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
-import Slider from "react-slick"; // Import react-slick
-import RattingCard from "../cards/RattingCard"; // Import your RattingCard component
+import Slider from "react-slick";
 
+// Import Slick CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import HelpfullToolsCard from "../cards/HelpfullToolsCard";
 
 const data = [
   {
@@ -33,7 +34,7 @@ const data = [
   },
 ];
 
-const ImageSlider = () => {
+const HelpFullSectionSlider = () => {
   const sliderRef = useRef(null); // Ref to access the slider instance
 
   // Settings for react-slick
@@ -70,13 +71,14 @@ const ImageSlider = () => {
       <Slider ref={sliderRef} {...settings} className="w-full">
         {data.map((info) => (
           <div key={info.id} className="px-2">
-            <RattingCard info={info} />
+            {/* <RattingCard info={info} /> */}
+            <HelpfullToolsCard info={info} />
           </div>
         ))}
       </Slider>
 
       {/* Custom prev/next buttons */}
-      <div className="flex justify-center mt-4 space-x-4">
+      <div className="flex justify-center mt-4 space-x-4 z-[9999]">
         <button
           onClick={goToPrev} // Go to previous slide
           className="border w-[40px] h-[40px] text-white p-2 rounded-full flex items-center justify-center hover:bg-[#13D28A] focus:outline-none duration-300"
@@ -94,4 +96,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default HelpFullSectionSlider;
