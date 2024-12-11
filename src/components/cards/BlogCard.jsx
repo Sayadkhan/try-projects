@@ -15,7 +15,7 @@ const BlogCard = ({ info }) => {
         <p className="font-[600] text-[16px] lg:text-[20px] xl:text-[24px] leading-[20px] lg:leading-[28px] xl:leading-[32px]">
           {info?.title}
         </p>
-        <p className=" h-[10rem] font-[400] text-[12px] lg:text-[14px] xl:text-[16px] leading-[16px] lg:leading-[20px] xl:leading-[24px] overflow-hidden">
+        <p className=" font-[400] text-[12px] lg:text-[14px] xl:text-[16px] leading-[16px] lg:leading-[20px] xl:leading-[24px] overflow-hidden">
           {info?.description}
         </p>
 
