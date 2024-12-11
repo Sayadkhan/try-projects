@@ -12,25 +12,28 @@ const data = [
     id: 1,
     image: "../../../../review/image1.png",
     name: "Ariel Dan",
-    title: "Serial Entrepreneur",
+    articalLiink: "https://nps-analysis-demo.streamlit.app/",
+    title: "NPS Analysis Tool",
     description:
-      "“This e-book transforms complex data strategies into simple, actionable steps that every startup needs as they mature. It's a must-read for startups ready to invest in a data hub, delivering crucial information in an accessible way”",
+      "This interactive tool, designed to demonstrate how NPS tracking can reveal customer satisfaction trends, sentiment patterns, and key feedback themes through time-based analysis, sentiment evaluation, and keyword insights.",
   },
   {
     id: 2,
     image: "../../../../review/image2.png",
+    articalLiink: "https://cohort-analysis-tool.streamlit.app/",
     name: "Matan Guttman",
-    title: "CTO @ Zoog",
+    title: "Cohort Analysis Tool",
     description:
-      "“As a CTO, I found this ebook incredibly insightful. It demystifies the process of building an analytics hub, making it easier to understand and apply.”",
+      "Experience the power of cohort analysis through this interactive tool, designed to demonstrate how tracking user segments over time can reveal crucial retention patterns and customer behavior trends through dynamic visualizations and detailed segment breakdowns.",
   },
   {
     id: 3,
     image: "../../../../review/image3.png",
+    articalLiink: "/",
     name: "Shuki Cohen",
-    title: "Director of Data",
+    title: "Data Stack Simulator",
     description:
-      "“A great resource for anyone looking to demystify the complexities of data hub construction – the chapters are clear, concise, and truly practical.”",
+      "Explore and compare data infrastructure options through this interactive planning tool, which combines real-world pricing data and industry expertise to deliver customized stack recommendations and reliable cost projections - helping you confidently plan your startup's data architecture",
   },
 ];
 

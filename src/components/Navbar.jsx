@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,6 +11,7 @@ const Navbar = () => {
 
   // Handle scrolling to a section
   const handleScrollToSection = (sectionId) => {
+    setIsMobileMenuOpen((prev) => !prev);
     setActiveSection(sectionId);
     if (location.pathname !== "/") {
       // Navigate to the homepage and pass the section ID in the state
@@ -75,13 +76,13 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-900 sticky top-0 text-gray-400 h-[70px] px-[10%] flex items-center justify-between z-[99999]">
-      <div className="flex items-center w-[90px] h-[90px]">
+      <Link to={"/"} className="flex items-center w-[90px] h-[90px]">
         <img
           src="../../../logo4-removebg-preview.png"
           alt="TDHH Logo"
           className="w-full h-full object-cover"
         />
-      </div>
+      </Link>
 
       <div className="hidden md:flex space-x-6 flex-1 justify-center">
         {links.map((link) => {
@@ -154,6 +155,7 @@ const Navbar = () => {
             } else {
               return (
                 <NavLink
+                  onClick={() => setIsMobileMenuOpen((prev) => !prev)}
                   key={index}
                   to={link.path}
                   className={({ isActive }) =>

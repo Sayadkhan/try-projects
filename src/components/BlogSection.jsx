@@ -7,34 +7,33 @@ const data = [
   {
     id: 1,
     image: "../../../BLOG/image1.png",
-    name: "Ariel Dan",
-    title: "Serial Entrepreneur",
+    articalLiink:
+      "https://www.linkedin.com/pulse/measure-flag-act-approach-identifying-re-engaging-your-nimrod-fisher-pf78e/?trackingId=w%2F6igpR9SKOynNUCpqF8%2Fg%3D%3D",
+    title:
+      "Measure-Flag-Act: An Approach to Identifying and Re-engaging With Your At-Risk Customers",
     description:
-      "“This e-book transforms complex data strategies into simple, actionable steps that every startup needs as they mature. It's a must-read for startups ready to invest in a data hub, delivering crucial information in an accessible way”",
+      "Customer churn has always been a significant challenge for businesses. Retaining existing customers is more cost-effective than acquiring new ones, but it also builds brand loyalty and drives long-term growth “from within”... ",
   },
   {
     id: 2,
     image: "../../../BLOG/image-2.png",
     name: "Matan Guttman",
-    title: "CTO @ Zoog",
+    articalLiink:
+      "https://www.linkedin.com/pulse/maximizing-nps-impact-automation-path-enhanced-customer-nimrod-fisher-iiegf/?trackingId=w%2F6igpR9SKOynNUCpqF8%2Fg%3D%3D",
+    title:
+      "Maximizing NPS Impact: Automation and the Path to Enhanced Customer Loyalty",
     description:
-      "“As a CTO, I found this ebook incredibly insightful. It demystifies the process of building an analytics hub, making it easier to understand and apply.”",
+      "In the dynamic landscape of product management, understanding customer feedback is paramount. Net Promoter Score (NPS) serves as a critical metric, revealing not just customer satisfaction but also loyalty....",
   },
   {
     id: 3,
     image: "../../../BLOG/image-3.png",
     name: "Shuki Cohen",
-    title: "Director of Data",
+    articalLiink:
+      "https://www.linkedin.com/pulse/when-less-more-data-simplifying-analytics-real-growth-nimrod-fisher-aqsgf/?trackingId=w%2F6igpR9SKOynNUCpqF8%2Fg%3D%3D",
+    title: "When Less is More in Data: Simplifying Analytics for Real Growth",
     description:
-      "“A great resource for anyone looking to demystify the complexities of data hub construction – the chapters are clear, concise, and truly practical.”",
-  },
-  {
-    id: 3,
-    image: "../../../BLOG/image-4.png",
-    name: "Shuki Cohen",
-    title: "Director of Data",
-    description:
-      "“A great resource for anyone looking to demystify the complexities of data hub construction – the chapters are clear, concise, and truly practical.”",
+      "In the fast-paced world of data, it's easy to feel swamped. Many VPs and C-suite leaders I've talked to lately share a common issue: while data is crucial, its complexity often leaves them overwhelmed. After spending the last couple of months chatting with various execs across different industries,....",
   },
 ];
 

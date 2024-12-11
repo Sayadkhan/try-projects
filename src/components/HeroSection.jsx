@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = ({ handleScrollToAbout }) => {
   return (
-    <section className="relative bg-gradient-to-b from-[--bg] to-[--bg] text-white flex items-center justify-center md:h-[656px] lg:h-[756.24px]">
+    <section className="relative bg-gradient-to-b from-[--bg] to-[--bg] text-white flex items-center justify-center md:h-[656px]">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 w-full"
         style={{
@@ -37,10 +37,10 @@ const HeroSection = ({ handleScrollToAbout }) => {
         <div className="mt-12 flex items-center justify-center">
           <div
             onClick={handleScrollToAbout}
-            className="w-32 h-32 border-[0.7px] border-green-600 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer duration-300"
+            className="flex items-center justify-center cursor-pointer duration-300"
           >
             <div>
-              <IoChevronDownSharp className="text-3xl" />
+              <IoChevronDownSharp className="text-6xl" />
             </div>
           </div>
         </div>

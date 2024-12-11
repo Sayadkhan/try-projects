@@ -3,11 +3,11 @@ import { IoIosStar } from "react-icons/io";
 
 const RattingCard = ({ info }) => {
   return (
-    <div className="w-full max-w-[419px] h-80 rounded-[12px] border-[0.7px] p-[24px] border-[#13D28A99] text-white relative">
-      <div className="flex flex-col gap-5 relative">
+    <div className="w-full max-w-[400px] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-[12px] border-[0.7px] p-6 sm:p-8 lg:p-10 border-[#13D28A99] text-white bg-transparent">
+      <div className="flex flex-col gap-5 relative h-full">
         {/* Profile Section */}
         <div className="flex items-center gap-4">
-          <div className="w-[60px] h-[60px]">
+          <div className="w-14 h-14 sm:w-16 sm:h-16">
             <img
               src={info.image}
               alt={info.name}
@@ -15,33 +15,33 @@ const RattingCard = ({ info }) => {
             />
           </div>
           <div>
-            <p className="font-[600] text-[24px] leading-[24px]">{info.name}</p>
-            <p className="text-sm text-gray-400">{info.title}</p>
+            <p className="font-semibold text-lg sm:text-xl lg:text-2xl leading-tight">
+              {info.name}
+            </p>
+            <p className="text-sm sm:text-base text-gray-400">{info.title}</p>
           </div>
         </div>
 
         {/* Description Section */}
-        <div>
-          <p className="font-[400] text-[18px] leading-[27px]">
+        <div className="flex-grow">
+          <p className="font-normal text-sm sm:text-base lg:text-lg leading-relaxed">
             {info.description}
           </p>
         </div>
 
         {/* Rating Section */}
-        <div className="flex gap-2 text-[#13D28A]">
-          <IoIosStar />
-          <IoIosStar />
-          <IoIosStar />
-          <IoIosStar />
-          <IoIosStar />
+        <div className="flex gap-1 text-[#13D28A]">
+          {[...Array(5)].map((_, index) => (
+            <IoIosStar key={index} size={20} />
+          ))}
         </div>
 
         {/* Decorative Image */}
-        <div className="absolute top-0 right-0 w-[48px] h-[48px]">
+        <div className="absolute top-4 right-4 w-10 h-10 sm:w-12 sm:h-12">
           <img
-            src="/try/image.png" // Corrected image path for public folder
+            src="/try/image.png"
             alt="Decorative Image"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
