@@ -3,7 +3,7 @@ import { IoIosStar } from "react-icons/io";
 
 const RattingCard = ({ info }) => {
   return (
-    <div className="w-full max-w-[400px] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-[12px] border-[0.7px] p-6 sm:p-8 lg:p-10 border-[#13D28A99] text-white bg-transparent">
+    <div className="w-full max-w-[400px] min-h-[300px] sm:min-h-[350px] lg:min-h-[350px] rounded-[12px] border-[0.7px] p-6 sm:p-8 lg:p-10 border-[#13D28A99] text-white bg-transparent">
       <div className="flex flex-col gap-5 relative h-full">
         {/* Profile Section */}
         <div className="flex items-center gap-4">
@@ -24,7 +24,7 @@ const RattingCard = ({ info }) => {
 
         {/* Description Section */}
         <div className="flex-grow">
-          <p className="font-normal text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="font-normal text-sm sm:text-base lg:text-sm leading-relaxed">
             {info.description}
           </p>
         </div>

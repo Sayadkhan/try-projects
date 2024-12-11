@@ -1,7 +1,7 @@
 const HeroComponents = () => {
   return (
     <div className="text-[#FFFFFF]">
-      <div className="flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-10 px-4 py-10">
+      <div className="grid lg:grid-cols-2 items-center justify-center gap-10 px-4 py-10">
         {/* Image Section (Mobile-first, hides on lg and larger) */}
         <div className="w-full md:w-[520px] h-auto md:h-[551.59px] lg:hidden block">
           <img
