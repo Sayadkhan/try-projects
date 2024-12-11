@@ -78,7 +78,7 @@ const HomePage = () => {
 
         <div
           id="services" // Added id here for the link to scroll to this section
-          className="flex flex-col items-center justify-center gap-[42px] h-auto py-8"
+          className="flex flex-col items-center justify-center gap-[42px] h-auto py-8 container mx-auto"
         >
           <SectionTitle
             title="My services"

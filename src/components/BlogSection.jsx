@@ -33,7 +33,7 @@ const data = [
       "https://www.linkedin.com/pulse/when-less-more-data-simplifying-analytics-real-growth-nimrod-fisher-aqsgf/?trackingId=w%2F6igpR9SKOynNUCpqF8%2Fg%3D%3D",
     title: "When Less is More in Data: Simplifying Analytics for Real Growth",
     description:
-      "In the fast-paced world of data, it's easy to feel swamped. Many VPs and C-suite leaders I've talked to lately share a common issue: while data is crucial, its complexity often leaves them overwhelmed. After spending the last couple of months chatting with various execs across different industries,....",
+      "In the fast-paced world of data, it's easy to feel swamped. Many VPs and C-suite leaders I've talked to lately share a common issue: while data is crucial, its complexity often leaves them overwhelmed.,....",
   },
 ];
 

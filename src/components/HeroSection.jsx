@@ -14,7 +14,7 @@ const HeroSection = ({ handleScrollToAbout }) => {
         aria-hidden="true"
       ></div>
 
-      <div className="relative text-center max-w-4xl z-10 px-4 md:px-8">
+      <div className="relative text-center max-w-4xl z-10 px-4 md:px-8 mt-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
           Turn Your Data Into A Strategic Advantage
         </h1>

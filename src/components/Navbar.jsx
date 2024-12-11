@@ -84,7 +84,7 @@ const Navbar = () => {
         />
       </Link>
 
-      <div className="hidden md:flex space-x-6 flex-1 justify-center">
+      <div className="hidden lg:flex space-x-6 flex-1 justify-center">
         {links.map((link) => {
           // Handle "About" and "Services" with scrolling
           if (link.name === "ABOUT" || link.name === "SERVICES") {
@@ -118,7 +118,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className="md:hidden text-gray-400 focus:outline-none"
+        className="lg:hidden text-gray-400 focus:outline-none"
         onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         aria-label="Toggle navigation menu"
       >
@@ -139,7 +139,7 @@ const Navbar = () => {
       </button>
 
       {isMobileMenuOpen && (
-        <div className="absolute top-[70px] left-0 w-full bg-gray-900 text-center flex flex-col space-y-4 py-4 md:hidden">
+        <div className="absolute top-[70px] left-0 w-full bg-gray-900 text-center flex flex-col space-y-4 py-4 lg:hidden">
           {links.map((link, index) => {
             // Handle "About" and "Services" with scrolling in mobile menu
             if (link.name === "ABOUT" || link.name === "SERVICES") {
@@ -179,7 +179,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <NavLink
           to="/contact"
           className="hover:bg-transparent hover:text-green-600 text-white border-[0.75px] bg-[--btn-bg] border-green-600 rounded px-4 py-2 duration-300"
