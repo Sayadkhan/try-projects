@@ -1,4 +1,12 @@
 const HeroComponents = () => {
+  const downloadPdf = () => {
+    window.open(
+      "https://drive.google.com/file/d/1_MDh9ahrNClGDkgtOGvWiweZpQp1fisd/view?usp=drive_link",
+      "_blank",
+      "noopener noreferrer"
+    );
+  };
+
   return (
     <div className="text-[#FFFFFF]">
       <div className="grid lg:grid-cols-2 items-center justify-center gap-10 px-4 py-10">
@@ -33,7 +41,10 @@ const HeroComponents = () => {
           </div>
 
           <div className="w-full sm:w-[256px] h-[64px] bg-[#13D28A] rounded-[8px] flex items-center justify-center text-black">
-            <button className="w-full h-full py-[23px] px-[32px]">
+            <button
+              onClick={downloadPdf}
+              className="w-full h-full py-[23px] px-[32px]"
+            >
               <p className="font-[600] text-[16px] sm:text-[18px] leading-[18px]">
                 Download EBOOK
               </p>
